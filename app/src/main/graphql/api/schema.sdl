@@ -9,6 +9,13 @@ type Address {
 }
 
 type User {
-  name: String! @deprecated
+  name: String! @deprecated(reason: "")
   address: Address
+  role: Role!
+}
+
+enum Role {
+    USER @deprecated(reason: "")
+    ADMIN
+    SUPPORT
 }
